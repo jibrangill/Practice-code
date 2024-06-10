@@ -44,6 +44,7 @@ while num_rolls >=1 and num_rolls <= 10:
                 num_twelves = num_twelves + 1
             print('Roll {} is {} ({} + {})'.format(i, roll_total, die1, die2))
             num_rolls -= 1
+            total_rolls = total_rolls + 1
         print('\nDice roll statistics:')
         print('2s:', num_twos)
         print('3s:', num_threes)
@@ -69,9 +70,7 @@ while num_rolls >=1 and num_rolls <= 10:
         print('10s: ' + '*' * num_tens)
         print('11s: ' + '*' * num_elevens)
         print('12s: ' + '*' * num_twelves)
-       
-        total_rolls +=1
-        print('TOTAL TURNS TAKEN',total_rolls)    
+        print('Total times the dice is rolled',total_rolls)    
         num_rolls = int(input('Enter number of rolls -1 to quit:\n'))
     else:
         print('Invalid number of rolls. Try again.')
